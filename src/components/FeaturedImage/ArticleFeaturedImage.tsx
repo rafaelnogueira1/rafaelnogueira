@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image';
 
-import * as S from './ArticleFeaturedImage.styles';
+import * as S from './FeaturedImage.styles';
 
 export default function ArticleFeaturedImage({ alt, ...rest }: ImageProps) {
 	return (

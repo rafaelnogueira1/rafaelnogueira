@@ -1,7 +1,7 @@
 import ArticleHeader from '@components/ArticleHeader/ArticleHeader';
 import { ArticleContent } from '@components/ArticleContent';
 import { Container } from '@components/Container';
-import { ArticleFeaturedImage } from '@components/ArticleFeaturedImage';
+import { ArticleFeaturedImage } from '@components/FeaturedImage';
 import { ArticleFooter } from '@components/ArticleFooter';
 
 export default function Article() {

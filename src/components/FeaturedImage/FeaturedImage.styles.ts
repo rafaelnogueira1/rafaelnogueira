@@ -26,3 +26,7 @@ export const Container = styled.div`
 		animation: ${scale} 20s linear infinite alternate;
 	}
 `;
+
+export const ContainerSinglePost = styled(Container)`
+	margin-top: ${spacing.articleBannerMarginBottom};
+`;

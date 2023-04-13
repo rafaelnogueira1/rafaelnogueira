@@ -10,11 +10,12 @@ export const Link = styled(NextLink)`
 	font-family: ${typography.articleTextFontFamily};
 	font-size: ${typography.articleTextFontSize};
 	line-height: ${typography.articleTitleLineHeight};
-	color: ${({ theme }) => theme.colors.text};
+	color: ${({ theme }) => theme.colors.featuredText};
 	font-weight: 700;
 	padding-right: ${spacing.md};
 	display: inline-flex;
 	align-items: center;
+	transition: all 0.15s ease-in;
 
 	&:hover {
 		color: ${({ theme }) => theme.colors.primary};

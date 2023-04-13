@@ -7,9 +7,21 @@ type TitleStyleProps = Pick<TitleProps, 'size'>;
 export const Title = styled('h1').attrs<TitleStyleProps>(({ size = 1 }) => ({
 	as: `h${size}`,
 }))<TitleStyleProps>`
-	font-family: ${typography.articleTitleFontFamily};
-	font-size: ${typography.articleTitleFontSize};
+	margin-bottom: ${spacing.articleTitleMarginBottom};
 	font-weight: 700;
 	color: ${({ theme }) => theme.colors.primaryTitle};
-	margin-bottom: ${spacing.articleTitleMarginBottom};
+	font-family: ${typography.articleTitleFontFamily};
+	font-size: ${typography.articleTitleFontSize};
+	transition: all 0.15s;
+
+	a {
+		transition: all 0.15s;
+		font-family: ${typography.articleTitleFontFamily};
+		font-size: ${typography.articleTitleFontSize};
+		color: ${({ theme }) => theme.colors.primaryTitle};
+
+		:hover {
+			color: ${({ theme }) => theme.colors.primary};
+		}
+	}
 `;

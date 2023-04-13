@@ -1,4 +1,4 @@
-import { shapes, spacing, typography } from '@styles';
+import { spacing, typography } from '@styles';
 import styled from 'styled-components';
 
 export const Header = styled.header`
@@ -11,31 +11,21 @@ export const PostMetaContainer = styled.div`
 `;
 
 export const Avatar = styled.div`
-	width: 40px;
-	height: 40px;
-	border-radius: ${shapes.borderRadiusXl};
-	overflow: hidden;
-`;
+	display: flex;
+	vertical-align: middle;
 
-export const InfoContainer = styled.div`
-	margin-left: ${spacing.xs};
-`;
-
-export const Author = styled.div`
-	font-family: ${typography.authorTextFontFamily};
-	font-size: ${typography.authorTextFontSize};
-	font-weight: 700;
-	color: ${({ theme }) => theme.colors.featuredText};
-	text-transform: uppercase;
+	svg {
+		color: ${({ theme }) => theme.colors.colors.greyDarker};
+	}
 `;
 
 export const PostMeta = styled.div`
 	display: flex;
-	margin-top: ${spacing.xxs};
+	margin-left: ${spacing.xs};
 
 	> * {
 		font-family: ${typography.textFontFamily};
-		font-size: ${typography.fontSize[1]};
+		font-size: ${typography.fontSize[2]};
 		color: ${({ theme }) => theme.colors.colors.grey};
 		text-transform: uppercase;
 	}

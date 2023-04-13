@@ -3,7 +3,7 @@ import * as S from './ArticleFooter.styles';
 export default function ArticleFooter() {
 	return (
 		<S.Footer>
-			<S.Link href="/">
+			<S.Link href="/article">
 				Continuar lendo
 				<S.Arrow>
 					<span />

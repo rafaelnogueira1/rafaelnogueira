@@ -15,7 +15,7 @@ export const colors = {
 	greyLight: '#e2edf4',
 	grey: '#becfda',
 	greyDark: '#445964',
-	greyDarker: '#2f3d46',
+	greyDarker: '#222222',
 	yellowLighter: '#fffacc',
 	yellowLight: '#fff399',
 	yellow: '#ffda05',
@@ -52,7 +52,8 @@ export const themeColors = {
 	textDisabled: colors.grey,
 	backgroundDisabled: colors.greyLight,
 	primaryTitle: colors.black,
-	featuredText: colors.greyDark,
+	featuredText: colors.greyDarker,
 	text: colors.greyDark,
 	border: colors.grey,
+	shadow: colors.greyDark,
 };

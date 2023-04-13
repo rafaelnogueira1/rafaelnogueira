@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import Link from 'next/link';
+import { RiCodeBoxFill } from 'react-icons/ri';
 
 import { Title } from '@components/Title';
 
@@ -7,21 +8,21 @@ import * as S from './ArticleHeader.styles';
 export default function ArticleHeader() {
 	return (
 		<S.Header>
-			<Title size={2} text="Business Partners Work at Modern Office" />
+			<Title size={2}>
+				<Link href="/article">Business Partners Work at Modern Office</Link>
+			</Title>
 			<S.PostMetaContainer>
 				<S.Avatar>
-					<Image src="/images/author/author.jpeg" width={40} height={40} alt="author" />
+					<RiCodeBoxFill size={20} />
 				</S.Avatar>
-				<S.InfoContainer>
-					<S.Author>Rafael Nogueira</S.Author>
-					<S.PostMeta>
-						<S.Category>
-							<span>Web Developer</span>
-							<span>Design</span>
-						</S.Category>
-						<S.Date>10 de Abril, 2023</S.Date>
-					</S.PostMeta>
-				</S.InfoContainer>
+
+				<S.PostMeta>
+					<S.Category>
+						<span>Web Developer</span>
+						<span>Design</span>
+					</S.Category>
+					<S.Date>10 de Abril, 2023</S.Date>
+				</S.PostMeta>
 			</S.PostMetaContainer>
 		</S.Header>
 	);

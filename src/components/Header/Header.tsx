@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { Container } from '@components/Container';
+import { Logo } from '@components/Logo';
 
 import * as S from './Header.styles';
 
@@ -9,7 +10,7 @@ export default function Header() {
 		<S.Header>
 			<Container>
 				<S.Navigation>
-					<S.Logo>Rafael Nogueira</S.Logo>
+					<Logo />
 					<S.Menu>
 						<ul>
 							<li>
