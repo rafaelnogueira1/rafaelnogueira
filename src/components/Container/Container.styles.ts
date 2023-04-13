@@ -2,7 +2,7 @@ import { utilities, spacing } from '@styles';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	width: ${utilities.container};
+	max-width: ${utilities.container};
 	padding: ${spacing.paddingContainer};
 	margin: ${spacing.center};
 

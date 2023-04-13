@@ -13,10 +13,16 @@ export default function Header() {
 					<S.Menu>
 						<ul>
 							<li>
-								<Link href="/">Home</Link>
+								<Link href="/">
+									Home
+									<span />
+								</Link>
 							</li>
 							<li>
-								<Link href="/">Posts</Link>
+								<Link href="/">
+									Posts
+									<span />
+								</Link>
 							</li>
 						</ul>
 					</S.Menu>

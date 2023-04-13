@@ -89,6 +89,10 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	p {
+		font-family: ${typography.articleTextFontFamily};
+		font-size: ${typography.articleTextFontSize};
+		line-height: ${typography.articleTitleLineHeight};
+		color: ${({ theme }) => theme.colors.text};
 
 		& + p {
 			margin-top: 10px;

@@ -16,35 +16,40 @@ const fontFamily = {
 };
 
 const fontSize = {
-	1: '12px',
-	2: '14px',
-	3: '16px',
-	4: '20px',
-	5: '24px',
-	6: '32px',
+	1: '10px',
+	2: '12px',
+	3: '14px',
+	4: '16px',
+	5: '20px',
+	6: '24px',
+	7: '32px',
 };
 
 const lineHeight = {
 	sm: '100%',
 	md: '120%',
 	lg: '140%',
+	xl: '160%',
 };
 
 export const typography = {
-	...fontFamily,
-	...fontSize,
-	...lineHeight,
+	fontFamily,
+	fontSize,
+	lineHeight,
 	logoFontFamily: fontFamily.secondary,
-	logoFontSize: fontSize[4],
+	logoFontSize: fontSize[5],
 	titleFontFamily: fontFamily.secondary,
 	titleLineHeight: lineHeight.md,
 	textFontFamily: fontFamily.primary,
-	textFontSize: fontSize[2],
-	textLineHeight: lineHeight.md,
+	textFontSize: fontSize[3],
+	textLineHeight: lineHeight.lg,
 	articleTitleFontFamily: fontFamily.secondary,
-	articleTitleFontSize: fontSize[5],
-	articleTitleLineHeight: lineHeight.md,
-	articleTextFontFamily: fontFamily.secondary,
-	articleTextFontSize: fontSize[2],
+	articleTitleFontSize: fontSize[7],
+	articleTitleLineHeight: lineHeight.xl,
+	articleTextFontFamily: fontFamily.primary,
+	articleTextFontSize: fontSize[4],
 	articleTextLineHeight: lineHeight.md,
+	authorTextFontFamily: fontFamily.primary,
+	authorTextFontSize: fontSize[2],
+	authorTextLineHeight: lineHeight.md,
 };

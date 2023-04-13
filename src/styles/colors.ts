@@ -29,6 +29,7 @@ export const colors = {
 };
 
 export const themeColors = {
+	colors,
 	primary: colors.green,
 	primaryLight: colors.greenLight,
 	primaryDark: colors.greenDark,
@@ -50,4 +51,8 @@ export const themeColors = {
 	disabled: colors.grey,
 	textDisabled: colors.grey,
 	backgroundDisabled: colors.greyLight,
+	primaryTitle: colors.black,
+	featuredText: colors.greyDark,
+	text: colors.greyDark,
+	border: colors.grey,
 };

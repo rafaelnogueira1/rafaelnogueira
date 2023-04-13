@@ -1,10 +1,11 @@
 import { utilities } from './utilities';
 
+type Operation = 'sum' | 'subtract' | 'multiply' | 'divide';
+type NumberOrString = number | string;
+
 const { sizes } = utilities;
 
-type Operation = 'sum' | 'subtract' | 'multiply' | 'divide';
-
-function stringToNumber(value: string | number): number {
+function parseNumericValue(value: NumberOrString): number {
 	if (!value) return 0;
 
 	if (typeof value === 'number') return value;
@@ -12,18 +13,22 @@ function stringToNumber(value: string | number): number {
 	const pattern = /\d+/g;
 	const parsedValue = value.match(pattern);
 
-	if (!parsedValue) return 0;
+	if (!parsedValue || parsedValue.length === 0) return NaN;
 
-	return parseInt(parsedValue.join(), 10);
+	return parseInt(parsedValue.join(''), 10);
 }
 
 function calculateSize(
-	primarySize: string | number,
-	secondarySize: string | number,
+	primarySize: NumberOrString,
+	secondarySize: NumberOrString,
 	operation: Operation
 ): string {
-	const primary = stringToNumber(primarySize);
-	const secondary = stringToNumber(secondarySize);
+	const primary = parseNumericValue(primarySize);
+	const secondary = parseNumericValue(secondarySize);
+
+	if (isNaN(primary) || isNaN(secondary)) {
+		return '0px';
+	}
 
 	switch (operation) {
 		case 'sum':
@@ -31,16 +36,19 @@ function calculateSize(
 		case 'subtract':
 			return `${primary - secondary}px`;
 		case 'divide':
+			if (secondary === 0) {
+				throw new Error('Cannot divide by zero.');
+			}
 			return `${primary / secondary}px`;
 		case 'multiply':
 			return `${primary * secondary}px`;
-
 		default:
 			return '0px';
 	}
 }
 
 export const spacing = {
+	xxs: sizes.xxs,
 	xs: sizes.xs,
 	sm: sizes.sm,
 	md: sizes.md,
@@ -60,16 +68,15 @@ export const spacing = {
 
 	articleContainerMarginTop: sizes.xxl,
 	articleContainerBodyMarginHorizontal: calculateSize(sizes.xxl, 2, 'multiply'),
-	articleBannerMarginBottom: sizes.md,
-	articleTitleMarginBottom: sizes.sm,
+	articleBannerMarginBottom: sizes.xl,
+	articleTitleMarginBottom: sizes.md,
 	articleTitlePaddingBottom: sizes.md,
 	articleMetaMarginBottom: sizes.sm,
+	articleTextMarginTop: sizes.lg,
+	articleContainerMarginHorizontal: calculateSize(sizes.xxl, 2, 'multiply'),
+	articleContainerMarginVertical: calculateSize(sizes.xl, sizes.xs, 'sum'),
 
-	singleArticleContainerMarginHorizontal: calculateSize(sizes.xxl, 2, 'multiply'),
-	singleArticleContainerMarginVertical: calculateSize(sizes.xl, sizes.xs, 'sum'),
 	singleArticleHeaderMarginBottom: sizes.sm,
-	singleArticleBannerMarginBottom: sizes.lg,
-	singleArticleTextMarginTop: sizes.lg,
 	singleArticleTitleSecondaryMargin: sizes.xxl,
 	singleArticleTagMarginTop: sizes.lg,
 	singleArticleTagMarginBottom: sizes.sm,
