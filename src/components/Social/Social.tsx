@@ -1,31 +1,14 @@
-import {
-	RiInstagramFill,
-	RiTwitterFill,
-	RiGithubFill,
-	RiMailFill,
-	RiLinkedinFill,
-} from 'react-icons/ri';
-
 import * as S from './Social.styles';
+import { SOCIAL_LINKS } from '@shared/config';
 
 export default function Social() {
 	return (
 		<S.SocialContainer>
-			<a href="#">
-				<RiInstagramFill />
-			</a>
-			<a href="#">
-				<RiTwitterFill />
-			</a>
-			<a href="#">
-				<RiGithubFill />
-			</a>
-			<a href="#">
-				<RiLinkedinFill />
-			</a>
-			<a href="#">
-				<RiMailFill />
-			</a>
+			{SOCIAL_LINKS.map(({ name, path, icon }) => (
+				<a key={name} href={path} target="_blank" rel="noreferrer">
+					{icon}
+				</a>
+			))}
 		</S.SocialContainer>
 	);
 }

@@ -1,17 +1,16 @@
+import Base from '@templates/Base/Base';
 import { ArticleContent } from '@components/ArticleContent';
 import { SinglePostFeaturedImage } from '@components/FeaturedImage';
-import ArticleHeader from '@components/ArticleHeader/ArticleHeader';
 import { Container } from '@components/Container';
-import Header from '@components/Header';
 import { Author } from '@components/Author';
 import { Tags } from '@components/Tags';
+import { SinglePostHeader } from '@components/ArticleHeader';
 
 export default function Article() {
 	return (
-		<>
-			<Header />
+		<Base>
 			<Container>
-				<ArticleHeader />
+				<SinglePostHeader />
 				<SinglePostFeaturedImage
 					src="/images/article/thomas-chizzali-K-ENC7LNABA-unsplash.jpg"
 					alt=""
@@ -20,6 +19,6 @@ export default function Article() {
 				<Tags />
 				<Author />
 			</Container>
-		</>
+		</Base>
 	);
 }

@@ -1,5 +1,6 @@
 import { spacing, typography } from '@styles';
 import styled from 'styled-components';
+import { AnimatedLink as AnimatedLinkComponent } from '@components/AnimatedLink';
 
 export const Header = styled.header`
 	margin: 0 ${spacing.articleContainerMarginHorizontal};
@@ -61,4 +62,8 @@ export const Date = styled.span`
 		display: inline-block;
 		margin: 0 ${spacing.xs};
 	}
+`;
+
+export const AnimatedLink = styled(AnimatedLinkComponent)`
+	margin-bottom: ${spacing.md};
 `;

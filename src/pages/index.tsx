@@ -1,16 +1,11 @@
-import Header from '@components/Header';
+import Base from '@templates/Base/Base';
 import Article from '@components/Article';
-import { Footer } from '@components/Footer';
-import { Hero } from '@components/Hero';
 
 export default function Home() {
 	return (
-		<>
-			<Hero />
-			<Header />
+		<Base>
 			<Article />
 			<Article />
-			<Footer />
-		</>
+		</Base>
 	);
 }
