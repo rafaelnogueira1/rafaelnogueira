@@ -24,7 +24,7 @@ export const SOCIAL_LINKS = [
 	},
 	{
 		name: 'Linkedin',
-		path: 'https://www.linkedin.com/rafaelnogueira1',
+		path: 'https://www.linkedin.com/in/rafaelnogueira1/',
 		icon: <RiLinkedinFill />,
 	},
 	{

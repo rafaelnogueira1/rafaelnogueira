@@ -1,10 +1,13 @@
-import { spacing, typography, utilities } from '@styles';
+import { breakpoints, spacing, typography, utilities } from '@styles';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	margin: 0 ${spacing.articleContainerMarginHorizontal} ${spacing.xxl};
 	padding-top: ${spacing.articleTextMarginTop};
+	margin: 0 ${spacing.sm} ${spacing.xl};
 
+	@media screen and (min-width: ${breakpoints.md}) {
+		margin: 0 ${spacing.articleContainerMarginHorizontal} ${spacing.xxl};
+	}
 	ul {
 		display: flex;
 		${utilities.cleanList}

@@ -1,9 +1,13 @@
-import { spacing, typography } from '@styles';
+import { breakpoints, spacing, typography } from '@styles';
 import styled from 'styled-components';
 import { AnimatedLink as AnimatedLinkComponent } from '@components/AnimatedLink';
 
 export const Header = styled.header`
-	margin: 0 ${spacing.articleContainerMarginHorizontal};
+	margin: 0 ${spacing.sm};
+
+	@media screen and (min-width: ${breakpoints.md}) {
+		margin: 0 ${spacing.articleContainerMarginHorizontal};
+	}
 `;
 
 export const PostMetaContainer = styled.div`

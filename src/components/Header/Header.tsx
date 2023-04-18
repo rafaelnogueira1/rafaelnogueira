@@ -2,9 +2,10 @@ import Link from 'next/link';
 
 import { Container } from '@components/Container';
 import { Logo } from '@components/Logo';
+import { NAVIGATION_LINKS } from '@shared/config';
+import MobileMenu from './MobileMenu';
 
 import * as S from './Header.styles';
-import { NAVIGATION_LINKS } from '@shared/config';
 
 export default function Header() {
 	return (
@@ -24,6 +25,7 @@ export default function Header() {
 							))}
 						</ul>
 					</S.Menu>
+					<MobileMenu />
 				</S.Navigation>
 			</Container>
 		</S.Header>

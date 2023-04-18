@@ -1,4 +1,4 @@
-import { utilities, shapes, spacing, typography } from '@styles';
+import { utilities, shapes, spacing, typography, breakpoints } from '@styles';
 import styled, { keyframes } from 'styled-components';
 
 const menuBounce = keyframes`
@@ -28,9 +28,19 @@ export const Navigation = styled.div`
 `;
 
 export const Menu = styled.nav`
+	button {
+		@media screen and (min-width: ${breakpoints.sm}) {
+			display: none;
+		}
+	}
+
 	ul {
+		display: none;
 		${utilities.cleanList}
-		display: flex;
+
+		@media screen and (min-width: ${breakpoints.sm}) {
+			display: flex;
+		}
 	}
 
 	a {

@@ -1,4 +1,4 @@
-import { shapes, spacing, typography } from '@styles';
+import { breakpoints, shapes, spacing, typography } from '@styles';
 import styled, { keyframes } from 'styled-components';
 
 const scale = keyframes`
@@ -12,10 +12,17 @@ const scale = keyframes`
 `;
 
 export const Container = styled.div`
-	display: flex;
 	border-top: 1px solid ${({ theme }) => theme.colors.border};
-	margin: ${spacing.articleTextMarginTop} ${spacing.articleContainerMarginHorizontal} 0;
 	padding-top: ${spacing.articleTextMarginTop};
+	margin: ${spacing.sm};
+
+	@media screen and (min-width: ${breakpoints.sm}) {
+		display: flex;
+	}
+
+	@media screen and (min-width: ${breakpoints.md}) {
+		margin: ${spacing.articleTextMarginTop} ${spacing.articleContainerMarginHorizontal} 0;
+	}
 `;
 
 export const ImageContainer = styled.div`
@@ -40,7 +47,12 @@ export const Header = styled.div`
 
 export const Main = styled.div`
 	width: 100%;
-	padding-left: ${spacing.md};
+	margin-top: ${spacing.md};
+
+	@media screen and (min-width: ${breakpoints.sm}) {
+		margin-top: 0;
+		padding-left: ${spacing.md};
+	}
 `;
 
 export const TitleMain = styled.h2`

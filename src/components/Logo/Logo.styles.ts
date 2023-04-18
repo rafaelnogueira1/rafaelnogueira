@@ -1,5 +1,6 @@
-import { shapes, spacing, typography } from '@styles';
+import { breakpoints, shapes, spacing, typography } from '@styles';
 import styled, { keyframes } from 'styled-components';
+import { Footer } from '@components/Footer/Footer.styles';
 
 const logo = keyframes`
 	0% {
@@ -78,6 +79,12 @@ export const Logo = styled.div`
 			display: block;
 			background: ${({ theme }) => theme.colors.primary};
 			margin-left: 1px;
+		}
+	}
+
+	@media screen and (max-width: ${breakpoints.sm}) {
+		${Footer} & {
+			margin-bottom: ${spacing.sm};
 		}
 	}
 `;

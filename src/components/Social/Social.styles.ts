@@ -1,8 +1,11 @@
-import { spacing } from '@styles';
+import { breakpoints, spacing } from '@styles';
 import styled from 'styled-components';
 
 export const SocialContainer = styled.div`
-	margin-top: ${spacing.xs};
+	@media screen and (min-width: ${breakpoints.sm}) {
+		margin-top: ${spacing.xs};
+	}
+
 	a {
 		& + a {
 			margin-left: ${spacing.xs};
