@@ -1,4 +1,4 @@
-import { Roboto, Poppins } from 'next/font/google';
+import { Roboto, Poppins, Merriweather } from 'next/font/google';
 
 const roboto = Roboto({
 	weight: ['400', '500'],
@@ -10,9 +10,15 @@ const poppins = Poppins({
 	subsets: ['latin'],
 });
 
+const merriweather = Merriweather({
+	weight: ['400'],
+	subsets: ['latin'],
+});
+
 const fontFamily = {
 	primary: `${roboto.style.fontFamily}, sans-serif`,
 	secondary: `${poppins.style.fontFamily}, sans-serif`,
+	serif: `${merriweather.style.fontFamily}, serif`,
 };
 
 const fontSize = {

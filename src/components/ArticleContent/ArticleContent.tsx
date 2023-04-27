@@ -1,3 +1,4 @@
+import { Blockquote } from '@components/Blockquote';
 import * as S from './ArticleContent.styles';
 
 export default function ArticleContent() {
@@ -9,6 +10,14 @@ export default function ArticleContent() {
 				available. However, the industry is fast becoming overcrowded, heaving with agencies
 				offering similar services — on the surface, at least.
 			</p>
+
+			<Blockquote>
+				<p>
+					Producing creative, fresh projects is the key to standing out. Unique side projects are
+					the best place to innovate, but balancing commercially and creatively lucrative work is
+					tricky.
+				</p>
+			</Blockquote>
 
 			<p>
 				Producing creative, fresh projects is the key to standing out. Unique side projects are the
